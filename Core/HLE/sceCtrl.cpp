@@ -106,7 +106,7 @@ static void __CtrlUpdateLatch()
 	// Copy in the current data to the current buffer.
 	ctrlBufs[ctrlBuf] = ctrlCurrent;
 	u32 buttons = ctrlCurrent.buttons;
-	if (emuRapidFire && (emuRapidFireFrames % 10) < 5)
+	if (emuRapidFire && (emuRapidFireFrames % 10) < 1)
 	{
 		ctrlBufs[ctrlBuf].buttons &= CTRL_EMU_RAPIDFIRE_MASK;
 		buttons &= CTRL_EMU_RAPIDFIRE_MASK;
